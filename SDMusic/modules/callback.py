@@ -8,37 +8,37 @@ from SDMusic.modules.play import cb_admin_check
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>👋 **Hey, I'm {query.message.from_user.mention}** \n 
+        f"""<b>👋 **Merhaba, Ben {query.message.from_user.mention}** \n 
  
- **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Allow You to Play Music On Groups Through The New Telegram Voice Chat !**
+ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Yeni Telegram Sesli Sohbet Yoluyla Gruplarda Müzik Çalmanıza İzin Vermeye Yarayan Bir Botum !**
  
- Find Out All The Bot's Commands & How They Work By Click On The » Commands Button !**
+ » Komutlar Düğmesine Tıklayarak Botun Tüm Komutlarını ve Nasıl Çalıştıklarını Öğrenin !**
  
- **For Information About All Feature Of This Bot, Just**
+ **Bu Botun Tüm Özellikleri Hakkında Bilgi İçin, Sadece**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ Beni Bir Gruba Ekle ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "How to use Me ❓ ", callback_data="cbhowtouse")
+                        "Nasıl Kullanılır ? ", callback_data="cbhowtouse")
                 ],[
                     InlineKeyboardButton(
-                         "Commands Help ❔", callback_data="cbcmds"
+                         "Komutlar Yardım ?", callback_data="cbcmds"
                     ),
                     InlineKeyboardButton(
-                        "Owner 🤴", url=f"https://t.me/Darkridersslk")
+                        "👤 Geliştirici ", url=f"https://t.me/theezelboss")
                 ],[
                     InlineKeyboardButton(
-                        "Support Group 👥", url=f"https://t.me/SDBOTz"
+                        "👥 Support", url=f"https://t.me/ezelhome"
                     ),
                     InlineKeyboardButton(
-                        "SDBOTs News 🙋‍♂️", url=f"https://t.me/SDBOTs_inifinity")
+                        "📢 Kanal ", url=f"https://t.me/ezelizm")
                 ],[
                     InlineKeyboardButton(
-                        "Source Code 💾", url="https://github.com/Sadew451/SDVCPlayer"
+                        "❌ Çıkış", callback_data="close"
                     )
                 ]
             ]
