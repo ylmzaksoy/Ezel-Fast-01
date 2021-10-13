@@ -50,9 +50,9 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbhelp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>👋 Hello there, welcome to the help menu !</b>
+        f"""<b>👋 Merhaba Yardım Menüsüne Hoşgeldiniz !</b>
 
-**in this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
+**Bu Menüde Birkaç Kullanılabilir Komut Menüsü Açabilirsiniz, Her Komut Menüsünde Ayrıca Her Komutun Kısa Bir Açıklaması Vardır.**
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -96,26 +96,26 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 here is the basic commands</b>
+        f"""<b>Temel Komutlar</b>
 
-🎧 [ Group Music Commands ]
-- `/play` (`song name)` - `play song from youtube`
-- `/ytpplay` `(song name)` - `play song directly from youtube` 
-- `/playlist` - `show the list song in queue`
-- `/song` `(song name)` - `download song from youtube`
-- `/search` `(video name)` - `search video from youtube detailed`
-- `/video` `(video name)` - `download video from youtube detailed`
-- `/lyrics` - `(song name)` `lyrics scrapper`
+🎧 [ Grup Müzik Komutları ]
+- `/play` `(Şarkı Adı)` - `Youtube'dan Şarkı Çal`
+- `/ytpplay` `(Şarkı Adı)` - `Doğrudan Youtube'dan Şarkı Çal` 
+- `/playlist` - `Sıradaki Liste Şarkısını Göster`
+- `/song` `(Şarkı Adı)` - `Youtube'dan Şarkı İndir`
+- `/search` `(Video Adı)` - `Youtube Detaylı Arama Videosu`
+- `/video` `(Video Adı)` - `Youtube Detaylı Video İndir`
+- `/lyrics` - `(Şarkı Adı)` `Şarkı Sözleri Kazıyıcı`
 
-🎧 [ Channel Music Commands ]
-- `/cplay` - `stream music on channel voice chat`
-- `/cplayer` - `show the song in streaming`
-- `/cpause` - `pause the streaming music`
-- `/cresume` - `resume the streaming was paused`
-- `/cskip` - `skip streaming to the next song`
-- `/cend` - `end the streaming music`
-- `/admincache` - `refresh the admin cache`
-- `/userbotjoin`: Invite @{ASSISTANT_NAME} Userbot to your chat
+🎧 [ Kanal Müzik Komutları ]
+- `/cplay` - `Kanal Sesli Sohbetinde Müzik Akışı Yapın`
+- `/cplayer` - `Şarkıyı Akışta Göster`
+- `/cpause` - `Müzik Akışını Duraklat`
+- `/cresume` - `Akışa Devam Etme Duraklatıldı`
+- `/cskip` - `Akışı Bir Sonraki Şarkıya Atla`
+- `/cend` - `Müzik Akışını Sonlandır`
+- `/admincache` - `Yönetici Önbelleğini Yenile`
+- `/userbotjoin`: Asistanı @{ASSISTANT_NAME} Sohbetinize Davet Eder
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -133,13 +133,13 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbadvanced"))
 async def cbadvanced(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 Here is the Advanced Commands</b>
+        f"""<b>Gelişmiş Komutlar</b>
 
-`/start` `(in group)` - `see the bot alive status`
-`/reload` - `reload bot and refresh the admin list`
-`/admincache` - `refresh the admin cache`
-`/ping` - `check the bot ping status`
-`/uptime` - `check the bot uptime status`
+`/start` `(Grup İçerisinde)` - `Botun Canlı Durumunu Görün`
+`/reload` - `Botu Yeniden Yükleyin Ve Yönetici Listesini Yenileyin`
+`/admincache` - `Yönetici Önbelleğini Yenile`
+`/ping` - `Bot Ping Durumunu Kontrol Et`
+`/uptime` - `Bot Çalışma Süresi Durumunu Kontrol Edin`
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -156,23 +156,23 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 Here is the Admin Commands</b>
+        f"""<bYönetici Komutları</b>
 
-`/player` - `show the music playing status`
-`/pause` - `pause the music streaming`
-`/resume` - `resume the music was paused`
-`/skip` - `skip to the next song`
-`/end` - `stop music streaming`
-`/userbotjoin` - `invite assistant join to your group`
-`/auth` - `authorized user for using music bot`
-`/deauth` - `unauthorized for using music bot`
-`/control` - `open the player settings panel`
-`/delcmd` `(on | off)` - `enable / disable del cmd feature`
-`/musicplayer` `(on / off)` - `disable / enable music player in your group`
-`/b` `and` `/tb` `(ban / temporary ban)` - `banned permanently or temporarily banned user in group`
-`/ub` - `to unbanned user you're banned from group`
-`/m` `and` `/tm` `(mute / temporary mute)` - `mute permanently or temporarily muted user in group`
-`/um` - `to unmute user you're muted in group`
+`/player` - `Müzik Çalma Durumunu Göster`
+`/pause` - `Öüzik Akışını Duraklat`
+`/resume` - `Devam Ettir`
+`/skip` - `Sonraki Şarkıya Geç`
+`/end` - `Müzik Akışını Durdur`
+`/userbotjoin` - `Asistanı Grubunuza Katılmaya Davet Edin`
+`/auth` - `Müzik Botunu Kullanmak İçin Yetkili Kullanıcı`
+`/deauth` - `Müzik Botu Kullanmak İçin Yetkisiz`
+`/control` - `Oynatıcı Ayarları Panelini Açın`
+`/delcmd` `(on | off)` - `Del Cmd Özelliğini Etkinleştir / Devre Dışı Bırak`
+`/musicplayer` `(on / off)` - `Grubunuzdaki Müzik Çaları Etkinleştir / Devre Dışı Bırak`
+`/b` `and` `/tb` `(ban / temporary ban)` - `Grupta Kalıcı Veya Geçici Olarak Yasaklanan Kullanıcı`
+`/ub` - `Bansız Kullanıcıya Gruptan Banlandın`
+`/m` `and` `/tm` `(mute / temporary mute)` - `Grupta Kalıcı Olarak Veya Geçici Olarak Sessize Alınan Kullanıcıyı Sessize Al`
+`/um` - `Grupta Sessize Aldığınız Kullanıcının Sesini Açmak İçin`
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -190,13 +190,13 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 Here is the Sudo Commands</b>
+        f"""<b>Sudo Komutları</b>
 
-`/userbotleaveall` - `order the assistant to leave from all group`
-`/gcast` - `send a broadcast message trought the assistant`
-`/stats` - `show the bot statistic`
-`/rmd` - `remove all downloaded files`
-`/clean` - `Remove all raw files`
+`/userbotleaveall` - `Asistana Tüm Gruptan Ayrılmasını Emredin`
+`/gcast` - `Asistandan Bir Yayın Mesajı Gönder`
+`/stats` - `Bot İstatistiğini Göster`
+`/rmd` - `İndirilen Tüm Dosyaları Kaldır`
+`/clean` - `Tüm Ham Dosyaları Kaldır`
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -214,14 +214,14 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbowner"))
 async def cbowner(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 Here is the Owner Commands</b>
+        f"""<b>Sahip Komutları</b>
 
-`/stats` - `show the bot statistic`
-`/broadcast` - `send a broadcast message from bot`
-`/block` `(user id - duration - reason)` - `block user for using your bot`
-`/unblock` `(user id - reason)` - `unblock user you blocked for using your bot`
-`/blocklist` - `show you the list of user was blocked for using your bot`
-📝 note: all commands owned by this bot can be executed by the owner of the bot without any exceptions.
+`/stats` - `Bot İstatistiğini Göster`
+`/broadcast` - `Bottan Yayın Mesajı Gönder`
+`/block` `(user id - duration - reason)` - `Botunuzu Kullanması İçin Kullanıcıyı Engelle`
+`/unblock` `(user id - reason)` - `Botunuzu Kullandığı İçin Engellediğiniz Kullanıcının Engellemesini Kaldırın`
+`/blocklist` - `Botunuzu Kullanmak İçin Engellenen Kullanıcı Listesini Göster`
+📝 Not : Bu Botun Sahip Olduğu Tüm Komutlar, İstisnasız Olarak Botun Sahibi Tarafından Yürütülebilir.
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -239,13 +239,13 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbfun"))
 async def cbfun(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 Here is the Fun Commands</b>
+        f"""<b>Eğlenceli Komutlar</b>
 
-`/chika` - `check it by yourself`
-`/wibu` - `check it by yourself`
-`/asupan` - `check it by yourself`
-`/truth` - `check it by yourself`
-`/dare` - `check it by yourself`
+`/chika` - `Kendin Kontrol Et`
+`/wibu` - `Kendin Kontrol Et`
+`/asupan` - `Kendin Kontrol Et`
+`/truth` - `Kendin Kontrol Et`
+`/dare` - `Kendin Kontrol Et`
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -263,12 +263,12 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbguide"))
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""How To Use 🤔:
+        f"""Nasıl Kullanılır 🤔:
 
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.
-4.) turn on the voice chat first before start to play music.
+1.) İlk Önce Beni Grubunuza Ekleyin.
+2.) Sonra Beni Yönetici Olarak Terfi Ettir Ve Anonim Yönetici Hariç Tüm İzinleri Ver.
+3.) Ekle @{ASSISTANT_NAME} Grubunuza Davet Etmek İçin /userbotjoin Yazın.
+4.) Müzik Çalmaya Başlamadan Önce Sesli Sohbeti Açın.
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
@@ -280,7 +280,7 @@ POWERD BY {BOT_NAME} A.I__""",
                 ],
                 [
                     InlineKeyboardButton(
-                        "Close ❌", callback_data="close"
+                        "❌ Çıkış ", callback_data="close"
                     )
                 ]
             ]
@@ -297,38 +297,38 @@ async def close(_, query: CallbackQuery):
 @cb_admin_check
 async def cbback(_, query: CallbackQuery):
     await query.edit_message_text(
-        "**🔥 Here is the Control Menu Of Bot :**",
+        "**Bot'un Kontrol Menüsü :**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⏸ pause", callback_data="cbpause"
+                        "⏸ Duraklat", callback_data="cbpause"
                     ),
                     InlineKeyboardButton(
-                        "▶️ resume", callback_data="cbresume"
+                        "▶️ Devam Et", callback_data="cbresume"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⏩ skip", callback_data="cbskip"
+                        "⏩ Atla", callback_data="cbskip"
                     ),
                     InlineKeyboardButton(
-                        "⏹ end", callback_data="cbend"
+                        "⏹ Son", callback_data="cbend"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Anti Commands", callback_data="cbdelcmds"
+                        "Anti Komutlar", callback_data="cbdelcmds"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Group Tools", callback_data="cbgtools"
+                        "Grup Araçları", callback_data="cbgtools"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Close ❌", callback_data="close"
+                        "❌ Çıkış", callback_data="close"
                     )
                 ]
             ]
@@ -341,23 +341,23 @@ async def cbback(_, query: CallbackQuery):
 @authorized_users_only
 async def cbgtools(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🔥 This is the Feature Information :</b>
+        f"""<b>Özellik Bilgileri :</b>
 
-🔥 **Feature:** This Feature Contains Functions That Can, Mute, Unban, Unmute Users in Your Group.
+🔥 **Özellikler:** Bu Özellik Grubunuzdaki Kullanıcıların Sesini Kapatabilen, Sesi Kapatan, Yasağını Kaldıran, Sesini Açabilen İşlevleri İçerir.
 
-And You Can Also Set A Time For the Ban And Mute Penalties For Members in Yur Goup So They Can Released Pnishment With The Secified Time.
+Ayrıca Yur Goup Üyeleri İçin Yasaklama ve Sesi Kapatma Cezaları İçin Bir Süre Belirleyebilirsiniz, Böylece Cezayı Seçilmiş Süreyle Serbest Bırakabilirler.
 
-❔ **usage:**
+📝 **Kullanım:**
 
-1️⃣ ban & temporarily ban user from your group:
-   » type `/b username/reply to message` ban permanently
-   » type `/tb username/reply to message/duration` temporarily ban user
-   » type `/ub username/reply to message` to unban user
-2️⃣ mute & temporarily mute user in your group:
-   » type `/m username/reply to message` mute permanently
-   » type `/tm username/reply to message/duration` temporarily mute user
-   » type `/um username/reply to message` to unmute user
-📝 note: cmd /b, /tb and /ub is the function to banned/unbanned user from your group, whereas /m, /tm and /um are commands to mute/unmute user in your group.
+1️⃣ Kullanıcıyı Grubunuzdan Yasaklayın Veya Geçici Olarak Yasaklayın:
+   » type `/b username/reply to message` Kalıcı Ban
+   » type `/tb username/reply to message/duration` Kullanıcıyı Geçici Olarak Yasakla
+   » type `/ub username/reply to message` Kullanıcı Yasağını Kaldır
+2️⃣ Grubunuzdaki Kullanıcıyı Sessize Alın Veya Geçici Olarak Sessize Alın:
+   » type `/m username/reply to message` Kalıcı Olarak Sessize Al
+   » type `/tm username/reply to message/duration` Kullanıcıyı Geçici Olarak Sessize Al
+   » type `/um username/reply to message` Kullanıcının Sesini Aç
+📝 Not : cmd /b, /tb and /ub & /m, /tm ve /um, Grubunuzdaki Kullanıcıyı Sessize Alma/Sessizden Açma Komutlarıdır..
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -378,12 +378,12 @@ async def cbdelcmds(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>This is The Feature Information :</b>
         
-**🔥 Feature:** Delete Every Commands Sent By Users to Avoid Spam in Groups !
+**🔥 Özellikler:** Gruplarda İstenmeyen Postalardan Kaçınmak İçin Kullanıcılar Tarafından Gönderilen Tüm Komutları Silin!
 ❔ usage:**
- 1️⃣ to turn on feature:
+ 1️⃣ Özelliği Açmak İçin:
      » type `/delcmd on`
     
- 2️⃣ to turn off feature:
+ 2️⃣  Özelliği Kapatmak İçin:
      » type `/delcmd off`
       
 POWERD BY {BOT_NAME} A.I__""",
@@ -402,42 +402,42 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbhelps(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>👋 Hello there, Welcome to the Help Menu !</b>
+        f"""<b>👋 Merhaba, Yardım Menüsüne Hoş Geldiniz !</b>
 
-**in This Menu You Can Open Several Available Command Menus, in Each Command Menu There is Also A Brief Explanation Of Each Command**
+**Bu Menüde Birkaç Mevcut Komut Menüsünü Açabilirsiniz, Her Komut Menüsünde Ayrıca Her Komutun Kısa Bir Açıklaması Bulunmaktadır.**
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Basic Commands", callback_data="cbbasic"
+                        "Temel Komutlar", callback_data="cbbasic"
                     ),
                     InlineKeyboardButton(
-                        "Advanced Commands", callback_data="cbadvanced"
+                        "Gelişmiş Komutlar", callback_data="cbadvanced"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Admin Commands", callback_data="cbadmin"
+                        "Yönetici Komutları", callback_data="cbadmin"
                     ),
                     InlineKeyboardButton(
-                        "Sudo Commands", callback_data="cbsudo"
+                        "Sudo Komutları", callback_data="cbsudo"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Owner Commands", callback_data="cbowner"
+                        "Sahip Komutları", callback_data="cbowner"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Fun Commands", callback_data="cbfun"
+                        "Eğlenceli Komutlar", callback_data="cbfun"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Back", callback_data="cbstart"
+                        "Geri", callback_data="cbstart"
                     )
                 ]
             ]
@@ -448,12 +448,12 @@ POWERD BY {BOT_NAME} A.I__""",
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🤔 How To Use Me 🤔:
+        f"""Nasıl Kullanılır 🤔:
 
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.
-4.) turn on the voice chat first before start to play music.
+1.) İlk Önce Beni Grubunuza Ekleyin.
+2.) Sonra Beni Yönetici Olarak Terfi Ettir Ve Anonim Yönetici Hariç Tüm İzinleri Ver.
+3.) Ekle @{ASSISTANT_NAME} Grubunuza Davet Etmek İçin /userbotjoin Yazın.
+4.) Müzik Çalmaya Başlamadan Önce Sesli Sohbeti Açın.
 
 POWERD BY {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
